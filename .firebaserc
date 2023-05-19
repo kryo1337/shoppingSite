@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "shoppingsiteveas": {
+      "hosting": {
+        "shoppingSite": [
+          "shoppingsiteveas"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "shoppingsiteveas"
+  }
+}

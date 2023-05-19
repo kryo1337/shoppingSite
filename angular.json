@@ -91,6 +91,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "shoppingSite:build:production",
+            "firebaseProject": "shoppingsiteveas",
+            "firebaseHostingSite": "shoppingsiteveas"
+          }
         }
       }
     }
