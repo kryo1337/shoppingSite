@@ -1,125 +1,62 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
+  margin: 0;
+  padding: 0;
+}
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  nav {
-    background-color: #f4f4f4;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 5px;
-  }
-  
-  nav ul li a:hover {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .container {
-    margin: 20px;
-  }
-  
-  h1 {
-    color: #be3e3e;
-  }
-  
-  /* Przesuwane zdjęcia */
-  .slider-container {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-  
-  .slider-content {
-    display: flex;
-    animation: slide 10s infinite;
-  }
-  
-  .slider-item {
-    flex: 0 0 33.33%;
-  }
-  
-  .slider-item img {
-    width: 100%;
-    height: auto;
-  }
-  
-  #image-track > .image {
-    object-fit: cover;
-    object-position: center;
-    height: 500px;
-  }
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin: 20px; /* Przeniesione z powtórzonego selektora .container */
+}
 
-  #image-track {
-    gap: 4vmin;
-  }
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  .cart-link {
-    float: right
-  }
-  
-  .cart {
-    width: 75px;
-    height: 75px;
-    margin-left: 10px;
-  }
-  
-  .login{
-    text-decoration: none;
-    color: #fff;
-    float: right;
-  }
+/* Usunięte style dla header i nav */
+
+h1 {
+  color: #ffffff;
+}
+
+/* Usunięte style dla .slider-container, .slider-content, .slider-item, .slider-item img, #image-track, #image-track > .image */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.cart-link {
+  margin-left: 10px; /* Zmienione z float: right */
+}
+
+.cart {
+  width: 75px;
+  height: 75px;
+}
+
+.login {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px; /* Zmienione z float: right */
+}

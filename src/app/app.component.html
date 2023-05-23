@@ -1,25 +1,23 @@
 <div class="wrapper">
-  <header>
+  <mat-toolbar color="primary">
     <h1>VEAS</h1>
-    <a routerLink="/koszyk" class="cart-link"><img class="cart" src="./assets/cart.jpg" alt="Koszyk"></a>
+    <a routerLink="/koszyk" class="cart-link"><mat-icon>shopping_cart</mat-icon></a>
     <a routerLink="/signin" class="login">Signin</a>
-  </header>
+  </mat-toolbar>
 
-  <nav>
-    <ul>
-      <li><a routerLink="/kategoria">Kategoria 1</a></li>
-      <li><a routerLink="'/kategoria/' + categoryId">Kategoria 2</a></li>
-      <li><a routerLink="'/kategoria/' + categoryId">Kategoria 3</a></li>
-      <li><a routerLink="'/kategoria/' + categoryId">Kategoria 4</a></li>
-      <li><a routerLink="'/kategoria/' + categoryId">Kategoria 5</a></li>
-    </ul>
-  </nav>
+  <mat-nav-list>
+    <a mat-list-item routerLink="/kategoria">Kategoria 1</a>
+    <a mat-list-item routerLink="/kategoria/{{ categoryId }}">Kategoria 2</a>
+    <a mat-list-item routerLink="/kategoria/{{ categoryId }}">Kategoria 3</a>
+    <a mat-list-item routerLink="/kategoria/{{ categoryId }}">Kategoria 4</a>
+    <a mat-list-item routerLink="/kategoria/{{ categoryId }}">Kategoria 5</a>    
+  </mat-nav-list>
 
   <div class="container">
     <router-outlet></router-outlet>
   </div>
 
-  <footer>
+  <mat-toolbar color="primary" class="footer">
     <p>&copy; 2023 Veas Sklep z odzieżą. Wszelkie prawa zastrzeżone.</p>
-  </footer>
+  </mat-toolbar>
 </div>
