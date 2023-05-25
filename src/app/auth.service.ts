@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -9,11 +10,9 @@ export class AuthService {
   constructor(
     public afAuth: AngularFireAuth
   ) {}
-  // Sign in with Google
   GoogleAuth() {
     return this.AuthLogin(new GoogleAuthProvider());
   }
-  // Auth logic to run auth providers
   AuthLogin(provider: GoogleAuthProvider | firebase.auth.AuthProvider) {
     return this.afAuth
       .signInWithPopup(provider)

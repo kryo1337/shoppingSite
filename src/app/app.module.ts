@@ -15,16 +15,31 @@ import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AuthService } from './auth.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { CartComponent } from './cart/cart.component';
+import { CategoryComponent } from './category/category.component';
+import { HomeComponent } from './home/home.component';
+import { SignInComponent } from './signin/signin.component';
+import { AuthenticationService } from './signin/services/authetication.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CartComponent,
+    CategoryComponent,
+    HomeComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -39,14 +54,25 @@ import { MatCardModule } from '@angular/material/card';
     providePerformance(() => getPerformance()),
     provideRemoteConfig(() => getRemoteConfig()),
     provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatFormFieldModule,
+    MatSidenavModule
   ],
   providers: [
-    ScreenTrackingService,UserTrackingService, AuthService
+    ScreenTrackingService,UserTrackingService, AuthService, AuthenticationService,
+    {
+    provide: 'angularfire2.app.options',
+    useValue: environment.firebase
+    }
   ],
   bootstrap: [AppComponent]
 })

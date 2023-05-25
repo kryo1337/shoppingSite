@@ -19,7 +19,13 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
-  margin: 20px; /* Przeniesione z powtórzonego selektora .container */
+  margin: 20px;
+}
+
+.login{
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
 }
 
 footer {
@@ -29,13 +35,19 @@ footer {
   text-align: center;
 }
 
-/* Usunięte style dla header i nav */
-
 h1 {
   color: #ffffff;
 }
 
-/* Usunięte style dla .slider-container, .slider-content, .slider-item, .slider-item img, #image-track, #image-track > .image */
+.cart-link {
+  margin-left: auto;
+}
+
+.cart {
+  width: 75px;
+  height: 75px;
+  color: #fff;
+}
 
 header {
   display: flex;
@@ -46,17 +58,23 @@ header {
   padding: 10px;
 }
 
-.cart-link {
-  margin-left: 10px; /* Zmienione z float: right */
+nav a {
+  margin-left: 10px;
 }
 
-.cart {
-  width: 75px;
-  height: 75px;
-}
-
-.login {
+.category-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
   color: #fff;
-  margin-left: 10px; /* Zmienione z float: right */
+}
+
+.category-list li {
+  margin-right: 10px;
+}
+
+.category-list li:last-child {
+  margin-right: 0;
 }
