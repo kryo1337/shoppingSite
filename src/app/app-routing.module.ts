@@ -8,6 +8,7 @@ import { SignInComponent } from './signin/signin.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'koszyk', component: CartComponent },
   { path: 'kategoria', component: CategoryComponent },
   { path: 'signin', component: SignInComponent },
