@@ -3,8 +3,13 @@
     <div class="product-grid">
       <div class="product-tile">
         <img src="./assets/bluza.jpg" alt="Produkt">
-        <div class="product-price">Cena: 80zł</div>
-        <button>Dodaj do koszyka</button>
+        <div class="product-price">Cena: <span id="price">80</span>zł</div>
+        <button onclick="addToCart()">Dodaj do koszyka</button>
       </div>
     </div>
+    <script>
+      function addToCart(){
+      console.log("ok")
+      }
+    </script>
   </mat-card>
