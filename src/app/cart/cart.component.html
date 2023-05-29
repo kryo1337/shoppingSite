@@ -1,12 +1,9 @@
 <mat-card class="container">
-    <mat-card-title>Koszyk</mat-card-title>
-    <div class="product-container">
-      <div id="cartValue"></div>
-      <button id="checkValue" onclick="getCartValue()">Sprawdź wartość koszyka</button>
-    </div>
-  </mat-card>
-  <br>
-  <button id="finishButton" onclick="window.location.href='./finalization'">Zakończ zakup</button>
-  <script src="script.js"></script>
- 
-  
+  <mat-card-title>Koszyk</mat-card-title>
+  <div class="product-container">
+    <div id="cartValue">{{ cartValue }}</div>
+    <button mat-raised-button (click)="getCartValue()">Sprawdź wartość koszyka</button>
+  </div>
+</mat-card>
+<br>
+<button mat-raised-button id="finishButton" (click)="redirectToFinalization()">Zakończ zakup</button>

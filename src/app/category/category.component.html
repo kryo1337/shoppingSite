@@ -1,15 +1,10 @@
 <mat-card class="category-container">
-    <mat-card-title>Kategoria</mat-card-title>
-    <div class="product-grid">
-      <div class="product-tile">
-        <img src="./assets/bluza.jpg" alt="Produkt">
-        <div class="product-price">Cena: <span id="price">80</span>zł</div>
-        <button onclick="addToCart()">Dodaj do koszyka</button>
-      </div>
+  <mat-card-title>Kategoria</mat-card-title>
+  <div class="product-grid">
+    <div class="product-tile">
+      <img src="./assets/bluza.jpg" alt="Produkt">
+      <div class="product-price">Cena: <span id="price">80</span>zł</div>
+      <button mat-raised-button (click)="addToCart()">Dodaj do koszyka</button>
     </div>
-    <script>
-      function addToCart(){
-      console.log("ok")
-      }
-    </script>
-  </mat-card>
+  </div>
+</mat-card>

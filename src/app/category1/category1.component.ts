@@ -1,12 +1,13 @@
 import { Component,ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { CartService } from '../cart/services/CartServices.service';
 
+
 @Component({
-  selector: 'app-category',
-  templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  selector: 'app-category1',
+  templateUrl: './category1.component.html',
+  styleUrls: ['./category1.component.css']
 })
-export class CategoryComponent implements AfterViewInit {
+export class Category1Component implements AfterViewInit {
   @ViewChild('priceElement', { static: false }) priceElement!: ElementRef;
 
   constructor(private cartService: CartService) {}
