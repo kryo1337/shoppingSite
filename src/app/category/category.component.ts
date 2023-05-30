@@ -16,6 +16,10 @@ export class CategoryComponent {
       const updatedValue = currentValue + price;
   
       localStorage.setItem('cartValue', updatedValue.toString());
+
+      const currentItems = localStorage.getItem('cartItems') || '';
+      const updateItems = currentItems + "Bluza OG BIKE 2005 \n";
+      localStorage.setItem('cartItems', updateItems);
     }
   }
 }

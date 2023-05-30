@@ -16,6 +16,10 @@ export class Category4Component {
       const updatedValue = currentValue + price;
   
       localStorage.setItem('cartValue', updatedValue.toString());
+
+      const currentItems = localStorage.getItem('cartItems') || '';
+      const updateItems = currentItems + "Buty biegacza \n";
+      localStorage.setItem('cartItems', updateItems);
     }
   }
 }

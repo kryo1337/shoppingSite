@@ -15,6 +15,10 @@ export class Category2Component{
       const updatedValue = currentValue + price;
   
       localStorage.setItem('cartValue', updatedValue.toString());
+
+      const currentItems = localStorage.getItem('cartItems') || '';
+      const updateItems = currentItems + "Kurtka TRAPSTAR \n";
+      localStorage.setItem('cartItems', updateItems);
     }
   }
 }

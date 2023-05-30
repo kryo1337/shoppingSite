@@ -3,7 +3,8 @@
   <div class="product-container">
     <button mat-raised-button (click)="getCartValue()">Sprawdź wartość koszyka</button>
   </div>
-  <div id="cartValue">{{ cartValue }}</div>
+  <div id="cartValue">{{ cartValue }}</div><br>
+  <div id="cartItems">{{ cartItems }}</div>
 </mat-card>
 <br>
 <button mat-raised-button id="finishButton" (click)="redirectToFinalization()">Zakończ zakup</button>

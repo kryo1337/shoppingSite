@@ -8,17 +8,25 @@ import { CartService } from './services/CartServices.service';
 })
 export class CartComponent{
   cartValue: string;
+  cartItems: string;
 
   constructor() {
     this.cartValue = '';
+    this.cartItems = '';
   }
 
   getCartValue(): void {
     const storedValue = localStorage.getItem('cartValue');
+    const storedItems = localStorage.getItem('cartItems');
     if (storedValue) {
       this.cartValue = storedValue;
     } else {
       this.cartValue = '0';
+    }
+    if (storedItems) {
+      this.cartItems = storedItems;
+    } else {
+      this.cartItems = '';
     }
   }
 

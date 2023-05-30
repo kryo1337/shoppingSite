@@ -16,6 +16,10 @@ export class Category3Component {
       const updatedValue = currentValue + price;
   
       localStorage.setItem('cartValue', updatedValue.toString());
+
+      const currentItems = localStorage.getItem('cartItems') || '';
+      const updateItems = currentItems + "Spodnie dresowe \n";
+      localStorage.setItem('cartItems', updateItems);
     }
   }
 }
