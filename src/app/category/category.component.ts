@@ -1,29 +1,21 @@
-import { Component,ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { CartService } from '../cart/services/CartServices.service';
+import { Component,ViewChild, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css']
 })
-export class CategoryComponent implements AfterViewInit {
-  @ViewChild('priceElement', { static: false }) priceElement!: ElementRef;
-
-  constructor(private cartService: CartService) {}
-
-  ngAfterViewInit(): void {
-    if (this.priceElement) {
-      const price = parseInt(this.priceElement.nativeElement.textContent || '0');
-      console.log(price.toString());
-    }
-  }
+export class CategoryComponent {
 
   addToCart(): void {
-    if (this.priceElement) {
-      const price = parseInt(this.priceElement.nativeElement.textContent || '0');
-      console.log(price.toString());
-      const cartValue = price;
-      this.cartService.setCartValue(cartValue);
+    const priceText = document.querySelector('#price')?.textContent;
+    if (priceText) {
+      const price = parseInt(priceText);
+      const cartValue = localStorage.getItem('cartValue') || '0';
+      const currentValue = parseInt(cartValue);
+      const updatedValue = currentValue + price;
+  
+      localStorage.setItem('cartValue', updatedValue.toString());
     }
   }
 }

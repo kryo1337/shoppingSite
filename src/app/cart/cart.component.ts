@@ -6,24 +6,22 @@ import { CartService } from './services/CartServices.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent {
+export class CartComponent{
   cartValue: string;
 
-  constructor(private cartService: CartService) {
+  constructor() {
     this.cartValue = '';
   }
 
-  ngOnInit(): void {
-    this.getCartValue();
-    this.cartService.cartValueUpdated.subscribe((value: number) => {
-      this.cartValue = value.toString();
-    });
+  getCartValue(): void {
+    const storedValue = localStorage.getItem('cartValue');
+    if (storedValue) {
+      this.cartValue = storedValue;
+    } else {
+      this.cartValue = '0';
+    }
   }
 
-  getCartValue(): void {
-    this.cartValue = this.cartService.getCartValue().toString();
-  }
-  
   redirectToFinalization(): void {
     window.location.href = './finalization';
   }

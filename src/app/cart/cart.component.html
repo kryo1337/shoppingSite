@@ -1,9 +1,9 @@
 <mat-card class="container">
   <mat-card-title>Koszyk</mat-card-title>
   <div class="product-container">
-    <div id="cartValue">{{ cartValue }}</div>
     <button mat-raised-button (click)="getCartValue()">Sprawdź wartość koszyka</button>
   </div>
+  <div id="cartValue">{{ cartValue }}</div>
 </mat-card>
 <br>
 <button mat-raised-button id="finishButton" (click)="redirectToFinalization()">Zakończ zakup</button>

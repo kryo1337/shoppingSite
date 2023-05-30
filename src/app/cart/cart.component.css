@@ -31,3 +31,10 @@
 #quantity {
   margin: 0 10px;
 }
+
+.cartValue{
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+  line-height: 3;
+}
