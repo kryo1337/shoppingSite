@@ -18,7 +18,7 @@ export class Category4Component {
       localStorage.setItem('cartValue', updatedValue.toString());
 
       const currentItems = localStorage.getItem('cartItems') || '';
-      const updateItems = currentItems + "Buty biegacza \n";
+      const updateItems = currentItems + "\nButy biegacza, \n";
       localStorage.setItem('cartItems', updateItems);
     }
   }

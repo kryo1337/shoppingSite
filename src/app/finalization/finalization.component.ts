@@ -23,5 +23,10 @@ export class FinalizationComponent {
       'Wartosc koszyka: ' + localStorage.getItem('cartValue');
     console.log(full_name);
     localStorage.setItem('cartValue', '0');
+    alert("Zamówienie wysłane do realizacji!");
+  }
+
+  allFine(): void {
+    
   }
 }

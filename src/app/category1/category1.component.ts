@@ -17,7 +17,7 @@ export class Category1Component{
       const updatedValue = currentValue + price;
   
       localStorage.setItem('cartValue', updatedValue.toString());
-      localStorage.setItem('cartItems', "Koszulka RED \n")
+      localStorage.setItem('cartItems', "Koszulka RED, \n")
     }
   }
 }

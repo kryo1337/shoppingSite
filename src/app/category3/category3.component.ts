@@ -18,7 +18,7 @@ export class Category3Component {
       localStorage.setItem('cartValue', updatedValue.toString());
 
       const currentItems = localStorage.getItem('cartItems') || '';
-      const updateItems = currentItems + "Spodnie dresowe \n";
+      const updateItems = currentItems + "Spodnie dresowe, \n";
       localStorage.setItem('cartItems', updateItems);
     }
   }
